@@ -14,5 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(which dind) dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 > /var/log/dockerd.log 2>&1 &
+$(which dind) dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --mtu=1410 > /var/log/dockerd.log 2>&1 &
 disown
